@@ -2,6 +2,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { DataProjects } from '../data/DataProjects'
 import { Tag } from '../components/Tag'
 import { FaArrowLeft } from 'react-icons/fa'
+import { FaSquareGithub } from 'react-icons/fa6'
 import { useState } from 'react'
 
 export function Project() {
@@ -93,6 +94,25 @@ export function Project() {
                         Minha <span className='underline decoration-myRed'>participação</span>
                     </h2>
                     <p className='text-base sm:text-xl leading-relaxed'>{project.part}</p>
+                </div>
+
+                <div className='flex gap-4 flex-wrap'>
+                    <button
+                        onClick={() => window.open(project.urlFrontGitHub)}
+                        className='flex items-center gap-2 cursor-pointer font-bold bg-myBlack text-bg hover:bg-myRed py-3 px-6 rounded-xl transition-all duration-200'
+                    >
+                        <FaSquareGithub className='text-xl' />
+                        Frontend
+                    </button>
+                    {'urlBackGitHub' in project && (
+                        <button
+                            onClick={() => window.open(project.urlBackGitHub)}
+                            className='flex items-center gap-2 cursor-pointer font-bold bg-myBlack text-bg hover:bg-myRed py-3 px-6 rounded-xl transition-all duration-200'
+                        >
+                            <FaSquareGithub className='text-xl' />
+                            Backend
+                        </button>
+                    )}
                 </div>
 
                 <div className='bg-myRed text-bg rounded-xl p-6 sm:p-10 flex flex-col gap-5'>
