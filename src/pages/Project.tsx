@@ -88,6 +88,13 @@ export function Project() {
                     <p className='text-base sm:text-xl leading-relaxed'>{project.description}</p>
                 </div>
 
+                <div className='flex flex-col gap-4'>
+                    <h2 className='font-bold text-3xl sm:text-4xl'>
+                        Minha <span className='underline decoration-myRed'>participação</span>
+                    </h2>
+                    <p className='text-base sm:text-xl leading-relaxed'>{project.part}</p>
+                </div>
+
                 <div className='bg-myRed text-bg rounded-xl p-6 sm:p-10 flex flex-col gap-5'>
                     <h2 className='font-bold text-3xl sm:text-4xl'>Tecnologias</h2>
                     <div className='flex gap-3 flex-wrap'>
